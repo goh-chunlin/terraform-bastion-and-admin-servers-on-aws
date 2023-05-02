@@ -51,3 +51,9 @@ variable "user_data" {
   description = "Commands or a command script to run when instance is launched."
   default = ""
 }
+
+variable "route_id" {
+  type        = string
+  description = "ID of the corresponding pre-requisite route table association."
+  default = "-"
+}

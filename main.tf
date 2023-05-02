@@ -37,5 +37,5 @@ module "ec2_admin" {
   }
   user_data           = "${file("admin_server_init.sh")}"
   vpc_id              = module.vpc.vpc_id
-  depends_on          = [module.vpc.aws_route_table_association]
+  route_id            = module.vpc.private_route_id
 }

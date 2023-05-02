@@ -17,7 +17,7 @@ resource "aws_security_group" "linux_server_security_group" {
   vpc_id       = var.vpc_id
  
   ingress {
-    description = "SSH inbound"
+    description = "SSH inbound (RT ID: ${var.route_id})"
     from_port = 22
     to_port = 22
     protocol = "tcp"

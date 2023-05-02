@@ -15,3 +15,9 @@ output "private_subnet_ids" {
   description = "Contains the private subnet IDs"
   value = [aws_subnet.private.*.id[0]]
 }
+
+## Private Route Table Association ID
+output "private_route_id" {
+  description = "Contains the private_route ID"
+  value = aws_route_table_association.private_route[0].id
+}
